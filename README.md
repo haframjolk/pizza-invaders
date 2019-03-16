@@ -44,7 +44,7 @@ pipenv shell
 python lokaverkefni.py
 ```
 
-#### Mac users
+### Mac users
 
 If you are using Mojave and installed Python via Homebrew, chances are Pygame won't work properly. A workaround is to install [Miniconda](https://conda.io/en/latest/miniconda.html) and use its distribution of Python, or download Python from [Python.org](https://www.python.org/downloads/) and use it instead of Homebrew's Python. You can specify the path to the interpreter when setting up Pipenv as such:
 

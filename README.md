@@ -16,7 +16,11 @@ Shoot: `Space`
 
 Quit: `Escape`
 
-## Setup
+## Setup (Windows)
+
+A packaged version of the game for Windows (64-bit) can be downloaded from the [Releases](https://github.com/reyniraron/pizza-invaders/releases) tab.
+
+## Setup (from source)
 
 ### Requirements
 

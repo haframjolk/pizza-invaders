@@ -1,6 +1,8 @@
 import pygame
 import random
 import os
+import sys
+
 """
 Reynir Aron Magnússon
 21.11.2018 - 5.12.2018
@@ -26,7 +28,20 @@ BULLET_SPEED = 12
 FONT_NAME = pygame.font.match_font("Arial")
 
 # Directory containing game files
-game_dir = os.path.dirname(__file__)
+# Determine whether or not game has been frozen
+is_frozen = getattr(sys, "frozen", False)
+# If game is frozen
+if is_frozen:
+    # py2app
+    if is_frozen == "macosx_app":
+        game_dir = "."
+    # PyInstaller
+    else:
+        game_dir = sys._MEIPASS
+# Use script directory if being run as script
+else:
+    game_dir = os.path.dirname(__file__)
+
 img_dir = os.path.join(game_dir, "img")
 snd_dir = os.path.join(game_dir, "snd")
 
@@ -187,14 +202,16 @@ def show_game_over():
         for event in pygame.event.get():
             # If user closes the window, quit the game
             if event.type == pygame.QUIT:
-                pygame.quit()
+                sys.exit(0)  # Use sys.exit instead of pygame.quit to prevent errors on quit
+                # pygame.quit()
             # If user presses any key, start game
             # Key must be pressed and then released to start game
             # This prevents KEYUP events from keys that were pressed during the previous game from starting a new one
             if event.type == pygame.KEYDOWN:
                 # If user presses the QUIT key, quit the game
                 if event.key == QUIT:
-                    pygame.quit()
+                    sys.exit(0)
+                    # pygame.quit()
                 key_pressed = True
             if event.type == pygame.KEYUP:
                 if key_pressed:
@@ -292,4 +309,5 @@ while running:
     pygame.display.flip()
 
 # When loop ends, quit game
-pygame.quit()
+sys.exit(0)
+# pygame.quit()

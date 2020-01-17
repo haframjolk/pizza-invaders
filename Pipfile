@@ -9,7 +9,7 @@ py2app = "*"
 
 [packages]
 pygame = "*"
-pyinstaller = "*"
+pyinstaller = ">=3.6"
 
 [requires]
 python_version = "3.7"

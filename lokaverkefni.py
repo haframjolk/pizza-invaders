@@ -4,7 +4,7 @@ import os
 import sys
 
 """
-Reynir Aron Magnússon
+RAM
 21.11.2018 - 5.12.2018
 Lokaverkefni
 """

@@ -12,15 +12,15 @@ DATA_FILES = ['img', 'snd']
 OPTIONS = {'iconfile': 'app-icon.icns',
            'plist': {
                 'CFBundleIdentifier': 'com.reyniraron.PizzaInvaders',
-                'NSHumanReadableCopyright': '© 2018 Reynir Aron',
+                'NSHumanReadableCopyright': '© 2018 RAM',
                 'CFBundleVersion': "1.0.1",
                 'CFBundleShortVersionString': "1.0.1",
            }}
 
 setup(
     name='Pizza Invaders',
-    url='https://github.com/reyniraron/pizza-invaders',
-    author='Reynir Aron',
+    url='https://github.com/reynmag/pizza-invaders',
+    author='RAM',
     app=APP,
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},

@@ -31,7 +31,7 @@ Pizza Invaders requires Python 3 and Pygame. Pipenv is recommended.
 #### Clone the repository to your computer and `cd` into it
 
 ```bash
-git clone https://github.com/reyniraron/pizza-invaders.git
+git clone https://github.com/reynmag/pizza-invaders.git
 cd pizza-invaders
 ```
 
@@ -50,49 +50,29 @@ python lokaverkefni.py
 
 ## Building packaged versions
 
-### Windows/Linux
-
-#### Install the development dependencies
+### Install the development dependencies
 
 ```bash
 pipenv install --dev
+pipenv shell
 ```
 
-#### Build an executable using PyInstaller
+### Build an executable using cx_Freeze
 
 ```bash
-pyinstaller "Pizza Invaders.spec"
+python setup.py [MODE]
 ```
 
-The packaged executable can be found in the `dist/` directory.
+Replace [MODE] with the appropriate mode for your use case.
 
-### macOS
+#### cx_Freeze modes
 
-#### Install the development dependencies
+| Mode      | Platform              | Output        |
+| --------  | --------------------- | –------------ |
+| build     | Any                   | Folder        |
+| bdist_mac | macOS                 | .app bundle   |
+| bdist_dmg | macOS                 | Disk image    |
+| bdist_msi | Windows               | MSI installer |
+| bdist_rpm | Linux (Red Hat-based) | RPM package   |
 
-```bash
-pipenv install --dev
-```
-
-#### Build an executable using py2app
-
-```bash
-python setup.py py2app --packages=pygame
-```
-
-The packaged app bundle can be found in the `dist/` directory.
-
-### Mac users
-
-Old versions of Pygame don't play nicely with Homebrew's Python on macOS Mojave. Pygame 1.9.5 or later is recommended to avoid any issues. If you are using an older version, please read the notice below.
-
-#### Old versions of Pygame
-
-If you are using Mojave and installed Python via Homebrew, chances are Pygame won't work properly. A workaround is to install [Miniconda](https://conda.io/en/latest/miniconda.html) and use its distribution of Python, or download Python from [Python.org](https://www.python.org/downloads/) and use it instead of Homebrew's Python. You can specify the path to the interpreter when setting up Pipenv as such:
-
-```bash
-pipenv shell --python $path_to_interpreter
-pipenv install
-```
-
-Once you've created a Pipenv environment, you can uninstall Miniconda or the Python binary, as Pipenv creates a copy for its environment.
+If the build is successful, you will find the output in either the `dist/` or `build/` directory, depending on the mode chosen.

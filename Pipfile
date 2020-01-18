@@ -5,11 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
+pyinstaller = ">=3.6"
 py2app = "*"
 
 [packages]
-pygame = "*"
-pyinstaller = ">=3.6"
+pygame = "==2.0.0.dev6"
 
 [requires]
 python_version = "3.7"

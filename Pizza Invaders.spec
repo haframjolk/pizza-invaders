@@ -5,7 +5,7 @@ block_cipher = None
 
 a = Analysis(['lokaverkefni.py'],
              binaries=[],
-             datas=[('img', 'img'), ('snd', 'snd')],
+             datas=[('img', 'img'), ('snd', 'snd'), ('font', 'font')],
              hiddenimports=['pkg_resources.py2_warn'],
              hookspath=[],
              runtime_hooks=[],

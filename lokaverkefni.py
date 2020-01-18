@@ -22,11 +22,6 @@ RIGHT = pygame.K_RIGHT
 FIRE = pygame.K_SPACE
 QUIT = pygame.K_ESCAPE
 
-# Config
-PLAYER_SPEED = 6
-BULLET_SPEED = 12
-FONT_NAME = pygame.font.match_font("Arial")
-
 # Directory containing game files
 # Determine whether or not game has been frozen
 is_frozen = getattr(sys, "frozen", False)
@@ -44,6 +39,12 @@ else:
 
 img_dir = os.path.join(game_dir, "img")
 snd_dir = os.path.join(game_dir, "snd")
+font_dir = os.path.join(game_dir, "font")
+
+# Config
+PLAYER_SPEED = 6
+BULLET_SPEED = 12
+FONT_NAME = os.path.join(font_dir, "freesansbold.ttf")
 
 # Game init
 pygame.init()

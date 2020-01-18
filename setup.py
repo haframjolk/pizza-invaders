@@ -8,13 +8,13 @@ Usage:
 from setuptools import setup
 
 APP = ['lokaverkefni.py']
-DATA_FILES = ['img', 'snd']
+DATA_FILES = ['img', 'snd', 'font']
 OPTIONS = {'iconfile': 'app-icon.icns',
            'plist': {
-                'CFBundleIdentifier': 'com.reyniraron.PizzaInvaders',
+                'CFBundleIdentifier': 'com.ram.PizzaInvaders',
                 'NSHumanReadableCopyright': '© 2018 RAM',
-                'CFBundleVersion': "1.0.1",
-                'CFBundleShortVersionString': "1.0.1",
+                'CFBundleVersion': "1.0.2",
+                'CFBundleShortVersionString': "1.0.2",
            }}
 
 setup(

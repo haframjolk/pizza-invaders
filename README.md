@@ -63,7 +63,7 @@ pipenv shell
 python setup.py [MODE]
 ```
 
-Replace [MODE] with the appropriate mode for your use case.
+Replace `[MODE]` with the appropriate mode for your use case.
 
 #### cx_Freeze modes
 

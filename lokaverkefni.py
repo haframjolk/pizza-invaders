@@ -27,12 +27,7 @@ QUIT = pygame.K_ESCAPE
 is_frozen = getattr(sys, "frozen", False)
 # If game is frozen
 if is_frozen:
-    # py2app
-    if is_frozen == "macosx_app":
-        game_dir = "."
-    # PyInstaller
-    else:
-        game_dir = sys._MEIPASS
+    game_dir = os.path.dirname(sys.executable)
 # Use script directory if being run as script
 else:
     game_dir = os.path.dirname(__file__)

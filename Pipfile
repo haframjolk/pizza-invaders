@@ -5,9 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
-pyinstaller = ">=3.6"
-pywin32-ctypes = "*"
-py2app = "*"
+cx-freeze = "*"
 
 [packages]
 pygame = "==2.0.0.dev6"

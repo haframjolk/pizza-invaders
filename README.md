@@ -67,12 +67,12 @@ Replace [MODE] with the appropriate mode for your use case.
 
 #### cx_Freeze modes
 
-| Mode      | Platform              | Output        |
-| --------  | --------------------- | –------------ |
-| build     | Any                   | Folder        |
-| bdist_mac | macOS                 | .app bundle   |
-| bdist_dmg | macOS                 | Disk image    |
-| bdist_msi | Windows               | MSI installer |
-| bdist_rpm | Linux (Red Hat-based) | RPM package   |
+| Mode      | Platform              | Output          |
+| --------- | --------------------- | --------------- |
+| build     | Any                   | Folder          |
+| bdist_mac | macOS                 | .app bundle     |
+| bdist_dmg | macOS                 | .dmg disk image |
+| bdist_msi | Windows               | MSI installer   |
+| bdist_rpm | Linux (Red Hat-based) | RPM package     |
 
 If the build is successful, you will find the output in either the `dist/` or `build/` directory, depending on the mode chosen.

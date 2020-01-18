@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 flake8 = "*"
 pyinstaller = ">=3.6"
+pywin32-ctypes = "*"
 py2app = "*"
 
 [packages]

@@ -31,7 +31,7 @@ Pizza Invaders requires Python 3 and Pygame. Pipenv is recommended.
 #### Clone the repository to your computer and `cd` into it
 
 ```bash
-git clone https://github.com/reynmag/pizza-invaders.git
+git clone https://github.com/haframjolk/pizza-invaders.git
 cd pizza-invaders
 ```
 
